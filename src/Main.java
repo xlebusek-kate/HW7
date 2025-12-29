@@ -32,30 +32,31 @@ public class Main {
         // 1 вариант
         byte oneDay = 100;
         byte days = 0;
-        int Amount = 555;
-        while (Amount >= 100) {
+        int amount = 555;
+        while (amount >= 100) {
             days++;
             if (days % 5 == 0) {
                 continue;
             }
-            Amount = Amount - oneDay;
+            amount = amount - oneDay;
         }
         System.out.println("Кол-во дней: " + days);
         // 2 вариант
-        Amount = 555;
+        amount = 555;
         days = 0;
         for (; ; ) {
-            if (Amount < 100) {
+            if (amount < 100) {
                 break;
             }
             days++;
             if (days % 5 == 0) {
                 continue;
             }
-            Amount = Amount - oneDay;
+            amount = amount - oneDay;
         }
         System.out.println("Кол-во дней: " + days);
         // Задание номер 4
+       float  percent = 0.07f;
         short month = 0;
         short money = 15000;
         int total = 0;
@@ -66,7 +67,7 @@ public class Main {
             month++;
             if (month % 6 == 0) {
                 total += money;
-                total = total + (7 * total) / 100;
+                total =(int) (total +(total * percent));
             } else {
                 total = total + money;
             }
